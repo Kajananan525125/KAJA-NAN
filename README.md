@@ -285,3 +285,68 @@ public class Main {
 //john
 //23
 //chenni
+
+class Counter{
+    static int count=0;
+    int instanceNumber=0;
+    Counter(){
+        count=count+1;
+        instanceNumber=instanceNumber+1;
+    }
+    void disp(){
+        System.out.println("InstanceNumber:"+instanceNumber);
+        System.out.println("SystemCount:"+count);
+    }
+}
+public class Mainclass {
+    public static void main(String[] args) {
+        Counter c1=new Counter();
+        Counter c2=new Counter();
+        Counter c3=new Counter();
+        c1.disp();
+        //1
+        //3
+        c2.disp();
+        //1
+        //3
+        c3.disp();
+        //1
+        //3
+       //Counter c1=new Counter();
+        // c1.disp();
+        //1
+        //1
+       //Counter c2=new Counter();
+        // c2.disp();
+        //2
+        //1
+        // Counter c3=new Counter();
+        // c3.disp();
+        //3
+        //1
+    }
+}
+
+interface playable{
+    void play();
+}
+class guittar implements playable{
+    public void play(){
+        System.out.println("play guittar");
+    }
+}
+class piano implements playable{
+    public void play(){
+        System.out.println("play piano");
+    }
+}
+public class Inst {
+    public static void main(String[] args) {
+        guittar g1=new guittar();
+        g1.play();
+        piano p1=new piano();
+        p1.play();
+    }
+}
+
+
