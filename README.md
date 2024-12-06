@@ -79,19 +79,15 @@ public class Sum {
 }
 
 public class Name {
-    // Method to return the name
     public String getName() {
         return "kajananan";
     }
 
     public static void main(String[] args) {
-        // Create an instance of the Name class
         Name obj1 = new Name();
 
-        // Call the getName method and store the result
         String myName = obj1.getName();
 
-        // Print the name
         System.out.println(myName);
     }
 }
@@ -177,7 +173,7 @@ public class Kingdom {
     }
 }
 
-class VehicleBase { // Renamed base class to avoid confusion
+class VehicleBase { 
     String brand;
     int year;
 
@@ -186,7 +182,7 @@ class VehicleBase { // Renamed base class to avoid confusion
     }
 }
 
-class Car extends VehicleBase { // Class names should start with uppercase
+class Car extends VehicleBase { 
     String fuelType;
 
     @Override
@@ -199,7 +195,7 @@ class Car extends VehicleBase { // Class names should start with uppercase
     }
 }
 
-class Truck extends VehicleBase { // Class names should start with uppercase
+class Truck extends VehicleBase { 
     int loadCapacity;
 
     @Override
@@ -212,10 +208,10 @@ class Truck extends VehicleBase { // Class names should start with uppercase
     }
 }
 
-public class Vehicle { // Ensure file name matches this public class
+public class Vehicle { 
     public static void main(String[] args) {
         Truck t1 = new Truck();
-        t1.startEngine(); // Calls the overridden method in the Truck class
+        t1.startEngine(); 
     }
 }
 
@@ -231,7 +227,7 @@ class Teacher1{
 public class Student2 {
     public static void main(String[] args) {
         Teacher1 t1=new Teacher1();
-        t1.disp(); // can call the function
+        t1.disp(); 
         //System.out.println(t1.name); it will make an error because private class cant be accessible from out side
     }
 }
