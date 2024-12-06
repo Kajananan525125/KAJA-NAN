@@ -349,4 +349,31 @@ public class Inst {
     }
 }
 
+import java.util.Scanner;
+class DivisionExample{
+    void dividenumbers(int num,int den){
+        try{
+             double result=num/den;
+            System.out.println("Result is :"+result);
+        }
+        catch(ArithmeticException e){
+            System.err.println("Cannot divisible by Zero");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+    DivisionExample d1=new DivisionExample();
+    Scanner scan=new Scanner(System.in);
+        System.out.println("Enter numerator :");
+        int num=scan.nextInt();
+        System.out.println("Enter denominator :");
+        int den= scan.nextInt();
+        d1.dividenumbers(num,den);
+    }
+
+}
+
+
 
