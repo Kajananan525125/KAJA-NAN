@@ -371,5 +371,84 @@ public class Main {
 
 }
 
+class A extends Thread{
+    public void run(){
+        for(int i=0;i<5;i++){
+            System.out.println("Hi");
+        }
+    }
+}
+class B extends Thread{
+    public void run(){
+        for(int i=0;i<3;i++){
+            System.out.println("Hello");
+        }
+    }
+}
+public class Threaddd {
+    public static void main(String[] args) {
+        A a1=new A();
+        B b1=new B();
+        a1.setPriority(1);
+        b1.setPriority(10);
+        a1.start();
+        b1.start();
+    }
+}
+
+class cal{
+    void div() throws Exception{
+        int a=10/0;
+        System.out.println(a);
+    }
+}
+public class exce {
+    public static void main(String[] args) {
+        cal c1=new cal();
+        try {
+            c1.div();
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+    }
+}
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+class InvalidAgeException extends Exception{
+    public InvalidAgeException(String message){
+        super(message);
+    }
+}
+class AgeValidator{
+    void checkage(int age) throws InvalidAgeException {
+            if (age <= 0 || age > 150) {
+                throw new InvalidAgeException("Age is Invalid");
+            }
+            System.out.println("Age is valid:" + age);
+    }
+}
+public class AgeException {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        try {
+            System.out.println("Enter an age :");
+            int age = scan.nextInt();
+            AgeValidator a1 = new AgeValidator();
+            a1.checkage(age);
+        }catch(InputMismatchException e){
+            System.out.println("Invalid input");
+        }catch (InvalidAgeException e){
+            System.out.println(e.getMessage());
+        }catch (Exception e){
+            System.out.println("unexpected error"+e.getMessage());
+        }finally {
+            scan.close();
+        }
+    }
+}
+
+
 
 
