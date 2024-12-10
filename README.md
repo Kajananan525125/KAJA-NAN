@@ -449,6 +449,18 @@ public class AgeException {
     }
 }
 
+import java.time.*;
+public class Timelap {
+    public static void main(String[] args) {
+       LocalDate d=LocalDate.now();
+        System.out.println(d);
+    }
+}
+
+
+
+
+
 
 
 
